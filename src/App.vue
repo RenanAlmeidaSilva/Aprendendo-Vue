@@ -1,19 +1,81 @@
 <template>
   <div id="app">
+    <!--
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <google></google>
+    <br><hr><br>
+    <gause></gause>
+    -->
+
+    <div>
+      <transition name="fade">
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+          <cards></cards>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import Google from "@/components/google";
+// import Gause from "@/components/gause";
+import Cards from "@/components/cards";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {Cards},
+
+  mounted() {
+    this.$mqtt.subscribe('casa/#')
+  },
+
+  data() {
+    return {
+      ficaVerde: true,
+      ficaVermelho: false
+    }
+  },
+
+  mqtt: {
+    'casa/#': function (val) {
+      let temp = String.fromCharCode.apply(null, val)
+      if (Number(temp) > 0) {
+        this.ficaVerde = true
+        this.ficaVermelho = false
+      } else {
+        this.ficaVerde = false
+        this.ficaVermelho = true
+      }
+    }
+  },
 }
+/*
+export default {
+  name: 'App',
+  components: {HelloWorld}
+}
+*/
 </script>
 
 <style>
@@ -24,5 +86,24 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.bordaGreen {
+  display: inline-block;
+  border: 2px green ridge;
+}
+
+.bordaRed {
+  display: inline-block;
+  border: 2px red ridge;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 3s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */
+{
+  opacity: 0;
 }
 </style>
