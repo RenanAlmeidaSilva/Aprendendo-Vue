@@ -9,9 +9,13 @@
     />
     <br>
     &emsp;&emsp;&emsp;
-    <v-btn @click="up">Increase</v-btn>
+    <v-btn rounded color="success" @click="up">
+      <v-icon small>mdi-plus</v-icon>&emsp;Increase
+    </v-btn>
     &emsp;
-    <v-btn @click="down">Decrease</v-btn>
+    <v-btn rounded color="error" @click="down">
+      <v-icon small>mdi-minus</v-icon>&emsp;Decrease
+    </v-btn>
     &emsp;&emsp;&emsp;
     <br> <br>
   </div>
