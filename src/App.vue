@@ -10,29 +10,24 @@
     -->
 
     <div>
-      <transition name="fade">
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-        <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
-          <cards></cards>
-        </div>
-      </transition>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
+      <div v-bind:class="{ bordaGreen: ficaVerde, bordaRed: ficaVermelho }">
+        <cards></cards>
+      </div>
     </div>
   </div>
 </template>
@@ -98,12 +93,4 @@ export default {
   border: 2px red ridge;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 3s;
-}
-
-.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */
-{
-  opacity: 0;
-}
 </style>

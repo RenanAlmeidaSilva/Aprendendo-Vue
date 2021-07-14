@@ -7,14 +7,15 @@
         :data="chartData"
         :options="chartOptions"
     />
+
     <br>
     &emsp;&emsp;&emsp;
-    <v-btn rounded color="success" @click="up">
-      <v-icon small>mdi-plus</v-icon>&emsp;Increase
+    <v-btn rounded color="primary" fab @click="up">
+      <v-icon small color="green">mdi-plus</v-icon>
     </v-btn>
     &emsp;
-    <v-btn rounded color="error" @click="down">
-      <v-icon small>mdi-minus</v-icon>&emsp;Decrease
+    <v-btn rounded color="error" fab @click="down">
+      <v-icon small>mdi-minus</v-icon>
     </v-btn>
     &emsp;&emsp;&emsp;
     <br> <br>
