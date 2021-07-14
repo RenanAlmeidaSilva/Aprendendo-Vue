@@ -9,7 +9,8 @@
     />
     <br>
     &emsp;&emsp;&emsp;
-    <v-btn @click="up">Increase</v-btn> &emsp;
+    <v-btn @click="up">Increase</v-btn>
+    &emsp;
     <v-btn @click="down">Decrease</v-btn>
     &emsp;&emsp;&emsp;
     <br> <br>
