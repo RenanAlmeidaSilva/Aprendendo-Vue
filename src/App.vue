@@ -85,12 +85,12 @@ export default {
 
 .bordaGreen {
   display: inline-block;
-  border: 2px green ridge;
+  border: 4px green ridge;
 }
 
 .bordaRed {
   display: inline-block;
-  border: 2px red ridge;
+  border: 4px red ridge;
 }
 
 </style>

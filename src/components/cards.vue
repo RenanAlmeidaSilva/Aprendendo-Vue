@@ -10,12 +10,12 @@
 
     <br>
     &emsp;&emsp;&emsp;
-    <v-btn rounded color="primary" fab @click="up">
-      <v-icon small color="green">mdi-plus</v-icon>
+    <v-btn fab light @click="up">
+      <v-icon light>mdi-plus</v-icon>
     </v-btn>
     &emsp;
-    <v-btn rounded color="error" fab @click="down">
-      <v-icon small>mdi-minus</v-icon>
+    <v-btn fab light @click="down">
+      <v-icon light>mdi-minus</v-icon>
     </v-btn>
     &emsp;&emsp;&emsp;
     <br> <br>
